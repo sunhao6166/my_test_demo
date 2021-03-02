@@ -1,64 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>video</title>
-    <link rel="stylesheet" href="styles/video.css" />
-    <link rel="stylesheet" href="styles/reset.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div id="videodemo">
-        <video id="video" >
-          <source src="video/video.mp4" />
-        </video>
-        <div id="btns">
-          <!-- 进度条按钮 -->
-          <input type="range" id="btntime" value="0" max="100" /><br />
-          <div id="progress_bar">
-            <span id="current_time" style="font-size: 12px">00:00:00</span>
-            /
-            <span id="totaltime" style="font-size: 12px">00:00:00</span>
-          </div>
-          <!-- 播放或暂停按钮 -->
-          <button onclick="startorstop()" id="startorstop">
-            <img src="img/start.png" alt="" />
-          </button>
-          <!-- 调节音量按钮 -->
-          <button onclick="volume()" id="volumes">
-            <img src="img/volume-on.png" alt="" id="volume_img" />
-            <!-- 音量滑块 -->
-            <input
-              id="volume"
-              data-volume="50"
-              value="50"
-              type="range"
-              max="100"
-              min="0"
-              step="1"
-            />
-            <!-- 音量数字显示 -->
-            <span id="volumechange" class="hide">音量:50%</span>
-          </button>
-          <!-- 倍速按钮 -->
-          <select id="sel">
-            <option value="1">1.0x</option>
-            <option value="0.5">0.5x</option>
-            <option value="1.5">1.5x</option>
-            <option value="2">2.0x</option>
-          </select>
-          <!-- 全屏按钮 -->
-          <button id="fullscreen_button">
-            <img
-              src="img/Full_screen.png"
-              alt=""
-              onclick="FullScreen()"
-              id="fullsceen-icon"
-            />
-          </button>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>video</title>
+  <link rel="stylesheet" href="styles/video.css" />
+  <link rel="stylesheet" href="styles/reset.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div id="videodemo">
+      <video id="video">
+        <source src="video/video.mp4" />
+      </video>
+      <div id="btns">
+        <!-- 进度条按钮 -->
+        <input type="range" id="btntime" value="0" max="100" /><br />
+        <div id="progress_bar">
+          <span id="current_time" style="font-size: 12px">00:00:00</span>
+          /
+          <span id="totaltime" style="font-size: 12px">00:00:00</span>
         </div>
+        <!-- 播放或暂停按钮 -->
+        <button onclick="startorstop()" id="startorstop">
+          <img src="img/start.png" alt="" />
+        </button>
+        <!-- 调节音量按钮 -->
+        <button onclick="volume()" id="volumes">
+          <img src="img/volume-on.png" alt="" id="volume_img" />
+          <!-- 音量滑块 -->
+          <input id="volume" data-volume="50" value="50" type="range" max="100" min="0" step="1" />
+          <!-- 音量数字显示 -->
+          <span id="volumechange" class="hide">音量:50%</span>
+        </button>
+        <!-- 倍速按钮 -->
+        <select id="sel">
+          <option value="0.5">0.5x</option>
+          <option value="1" selected="selected">1.0x</option>
+          <option value="1.5">1.5x</option>
+          <option value="2">2.0x</option>
+        </select>
+        <!-- 全屏按钮 -->
+        <button id="fullscreen_button">
+          <img src="img/Full_screen.png" alt="" onclick="FullScreen()" id="fullsceen-icon" />
+        </button>
+      </div>
     </div>
     <script src="scripts/video.js"></script>
-  </body>
+</body>
+
 </html>

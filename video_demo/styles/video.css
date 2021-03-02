@@ -1,5 +1,6 @@
-*{
-  margin: 0;padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 /* 视频容器大小 */
 .container {
@@ -28,7 +29,7 @@ video {
   border-radius: 4px;
 }
 /* 把视频控件移入视频内部 */
-#btns{
+#btns {
   right: 0;
   left: 0;
   padding-bottom: 10px;
@@ -36,71 +37,76 @@ video {
   bottom: 0;
   z-index: 1100;
   transition: all 0.2s ease;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.5)
+  );
 }
 /* 控制内部视频控件显示或者隐藏*/
-.hide{
+.hide {
   display: none;
 }
 /* 进度条样式 */
-#btntime{
+#btntime {
   width: 100%;
   position: relative;
   height: 8.4px;
   margin-bottom: 10px;
 }
 /* 显示视频总时间 */
-#progress_bar{
+#progress_bar {
   color: white;
   position: absolute;
   left: 10%;
   top: 47%;
 }
 /* 视频按钮样式 */
-button{
-  background-color: rgba(0, 0, 0,0);
-  border-style:none;
+button {
+  background-color: rgba(0, 0, 0, 0);
+  border-style: none;
   outline: none;
   color: white;
   width: 32px;
   height: 32px;
 }
 /* 播放按钮 */
-#startorstop{
+#startorstop {
   margin-left: 10px;
 }
 /* 音量按钮 */
-#volumes{
+#volumes {
   float: right;
   margin-right: 135px;
   z-index: 1110;
 }
-#volume{
+#volume {
   display: none;
 }
-#volumes:hover #volume{
+#volumes:hover #volume {
   display: block;
 }
-#volumes input{
-  transform:rotate(-90deg) ;
+#volumes input {
+  transform: rotate(-90deg);
   position: absolute;
-  top: -40px;
-  right: 98px;
+  top: -47px;
+  right: 88px;
 }
-#volumechange{
+#volumechange {
   position: absolute;
   left: 15px;
-  top: -15px;
-  font-size: 18px;
+  top: -20px;
+  font-size: 12px;
+  color: aqua;
 }
 /* 倍速按钮 */
-#sel{
+#sel {
   position: absolute;
   right: 80px;
   top: 32px;
 }
 /* 全屏按钮 */
-#fullscreen_button{
+#fullscreen_button {
   position: absolute;
   right: 20px;
   top: 24px;
